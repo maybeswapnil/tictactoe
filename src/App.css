@@ -1,0 +1,77 @@
+.App {
+  margin-top: 12%;
+  margin-bottom: auto;
+
+  padding-left: 50px;
+
+}
+.maingame {
+  padding-left: 32px;
+}
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+#loginbox {
+  width: 400px;
+  height: 30px;
+  padding-left: 12px;
+}
+
+#loginheader {
+  font-size:100px;
+  color: #343f56;
+}
+
+#opponentheader {
+  font-size:50px;
+  color: #343f56;
+}
+
+
+.loginbutton {
+  position: relative;
+  background-color: #f54748;
+  border: none;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  width: 100px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.loginbutton:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.loginbutton:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#loginerror {
+  color:#f54748;
+  font-size:15px;
+}
+
+@media screen and (max-width: 1080px) {
+  #loginbox {
+    width: 200px;
+    height: 30px;
+    padding-left: 12px;
+  }
+}
