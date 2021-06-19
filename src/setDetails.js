@@ -1,8 +1,8 @@
-function setPoints(ID,value) {
-    let BaseURL = 'https://localhost:8080/';
-var l = 1;
+function setDetails(name, password) {
+    let BaseURL = "https://localhost:8080/";
+
     return new Promise((resolve, reject) =>{
-        fetch(BaseURL+"setPoints/?Id=" + ID+"&points=" + value, {
+        fetch(BaseURL+"setDetails/?name=" + name + "&password=" + password, {
             method: 'GET'
           })
           .then((response) => response.json())
@@ -12,6 +12,8 @@ var l = 1;
           .catch((error) => {
             reject(error);
           });
+
+  
       });
 }
-export default setPoints;
+export default setDetails;

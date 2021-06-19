@@ -94,16 +94,94 @@ body {
   
   .p1 {
     color: black;
-    margin-left: 260px;
+    margin-left: 20px;
   }
   
   .p2 {
     color: #33DBFF;
-    margin-right: 260px;
+    margin-right: 20px;
   }
   
   .flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  section {
+    height: 100vh;
+    color: white;
+    scroll-snap-align: start;
+  }
+
+  .container {
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100vh;
+  }
+  .one {
+    padding-top: 7vh;
+  }
+  .two {
+    background-color: white;
+    padding-top: 7vh;
+  }
+
+  .three {
+    background-color: white;
+    padding-top: 7vh;
+    padding-left: 2vh;
+  }
+  #logonheader {
+    font-size:100px;
+    color: #343f56;
+  }
+  #despheader {
+    font-size:50px;
+    color: #343f56;
+  }
+  #text {
+    color: #F58634;font-size: 2vh;
+  }
+  #var {
+    color: #BECA5C;
+  }
+  #gt {
+    color: #7ECA9C;
+  }
+
+  .logonbutton {
+    position: relative;
+    background-color: #FFEAC9;
+    border: none;
+    font-size: 15px;
+    color: #343f56;
+    font-weight: bold;
+    padding: 12px;
+    width: 100px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .logonbutton:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .logonbutton:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
   }

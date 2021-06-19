@@ -33,14 +33,10 @@ class App extends Component {
       this.setState({opponentName:responseJson.uname})
       console.log(responseJson)
       console.log(this.state.opponentName)
+      if(!this.state.status) {
+        this.setState({error:false})
+      }
     });
-
-   
-    
-    if(!this.state.status) {
-      this.setState({error:false})
-    }
-  
   }
   opponent() {
     PostOppoData("getOpponentDetails", this.state.opponentID).then((result) => {
@@ -49,11 +45,10 @@ class App extends Component {
       this.setState({opponentName:responseJson.uname})
       console.log(responseJson)
       console.log(this.state.opponentName)
+      if(!this.state.opponent) {
+        this.setState({oppoError:false})
+      }
     });
-
-    if(!this.state.opponent) {
-      this.setState({oppoError:false})
-    }
   }
 
   handleChangeUname(e) {
@@ -69,9 +64,11 @@ class App extends Component {
    
   }
   render() {
+
     if(!this.state.status) {
         return (
           <div className="App">
+            
             <h1 id="loginheader">Login.</h1>
             <input type="text" name="uname" id="loginbox" placeholder="Enter ID" onChange={this.handleChangeUname}/>
             <br />
@@ -87,7 +84,8 @@ class App extends Component {
       return (
         <div>
 
-          <h1 id="loginheader" className="maingame game">tic tac toe</h1>
+          <h1 id="final">tictactoe by chemo</h1>
+          
           <MainGame myID={this.state.uname} opponentID={this.state.opponentID}/>
 
         </div>

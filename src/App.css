@@ -8,7 +8,7 @@
 .maingame {
   padding-left: 32px;
 }
-html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {margin: 0; height: 100%; }
 
 #loginbox {
   width: 400px;
@@ -26,6 +26,21 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   color: #343f56;
 }
 
+#final {
+  font-size:4vh;
+  color: #343f56;padding-left: 2vh;
+}
+
+.footer {
+  font-size:1.5vh;
+  color: #343f56;
+  left: 0;
+  bottom: 10;
+  
+  background-color: #F54748;
+  color: white;
+  text-align: center;
+}
 
 .loginbutton {
   position: relative;
