@@ -96,7 +96,7 @@ class App extends Component {
       return (
         <div className="App">
           
-          <h1 id="opponentheader">Welcome {this.state.name},  select opponent.</h1>
+          <h1 id="opponentheader">Welcome,  select opponent.</h1>
           <input type="text" name="uname" id="loginbox" placeholder="Enter ID" onChange={this.handleChangeOppo}/>
           {!this.state.oppoError? <h1 id="loginerror">wrong id!</h1>:<h1></h1>}
           <br/>
