@@ -85,7 +85,18 @@ body {
   .game {
     margin-left: 225px;
   }
-  
+
+  #lolol {
+    overflow: hidden;
+  }
+  .plane {
+    height: 50vh;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -3;
+    padding-top: 50vh;
+  }
+
   .p1, .p2 {
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-family: 'Montserrat', sans-serif;

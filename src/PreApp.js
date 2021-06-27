@@ -2,8 +2,9 @@ import './App.css';
 import React, {Component} from 'react';
 import PostData from './Authenticate';
 import setDetails from './setDetails';
-
+import {TweenMax,TimelineLite, Power3} from 'gsap';
 import App from './App';
+import plane from './plane.png';
 
 class PreApp extends Component {
 
@@ -19,15 +20,12 @@ class PreApp extends Component {
       Id:0,
       bug: false
     };
-    
+
     this.logon = this.logon.bind(this);
-    
     this.handleChangeUname = this.handleChangeUname.bind(this);
     this.handleChangeUpass = this.handleChangeUpass.bind(this);
     this.handleChangeUpassRe = this.handleChangeUpassRe.bind(this);
-
   }
-
   logon() {
       if(this.state.upass == this.state.upassre) {
         setDetails(this.state.uname, this.state.upass).then((result) => {
@@ -56,7 +54,10 @@ class PreApp extends Component {
   render() {
         return (
           <div className="container">
+
+              
               <section className="one">
+
                     <App />
               </section>
                    
