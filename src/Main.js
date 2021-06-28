@@ -148,7 +148,8 @@ const Main = () => {
               drag={true}
               //dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }}
               initial={{ opacity: 0.8, y: -100 }}
-              animate={{ opacity: 1, y: 130, transition: { duration: 20 },  scale: 1.5, rotate: 300  }}
+              animate={{ opacity: 1, y: 130, transition: { repeat: 6, repeatType: "reverse", min:0,max:100,bounceStiffness:100, duration: 12 },  scale: 1.5, rotate: 300  }}
+              
             />
             <Image
               src={PlanetTwo}
@@ -157,7 +158,7 @@ const Main = () => {
               drag={true}
               //dragConstraints={{ left: 50, right: 0, top: 0, bottom: 50 }}
               initial={{ opacity: 0.8, x: 400 , scale: 2.2}}
-              animate={{ opacity: 1, x: -100, transition: { duration: 20 }, scale: 0.2, rotate: 100 }}
+              animate={{ opacity: 1, x: -100, transition: { repeat: 6, repeatType: "reverse", duration: 12 }, scale: 0.2, rotate: 100 }}
               
             />       
             <Image
@@ -167,7 +168,7 @@ const Main = () => {
               drag={true}
               //dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
               initial={{ opacity: 0.8, y: 700 }}
-              animate={{ opacity: 1, y: 0, transition: { duration: 20 } , scale: 2.7, rotate: 190}}
+              animate={{ opacity: 1, y: 0, transition: { repeat: 6, repeatType: "reverse", duration: 12 } , scale: 2.7, rotate: 190}}
             />
           </ColumnRight>
         </Container>
