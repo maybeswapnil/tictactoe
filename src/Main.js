@@ -6,13 +6,15 @@ import PlanetTwo from './images/planet-2.svg';
 import PlanetThree from './images/planet-3.svg';
 import PlanetFour from './images/planet-4.svg';
 import PreApp from './PreApp';
+import App from './App';
+
 
 const Section = styled.section`
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #131313;
+  background: white;
 `;
 
 const Container = styled.div`
@@ -27,7 +29,7 @@ const Container = styled.div`
 `;
 const ColumnLeft = styled.div`
   display: flex;
-  color: #fff;
+  color: #131313;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -48,12 +50,12 @@ const ColumnLeft = styled.div`
 const Button = styled(motion.button)`
   padding: 1rem 3rem;
   font-size: 1rem;
-  border: 2px solid #fff;
+  border: 2px solid #131313;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
   background: transparent;
-  color: #fff;
+  color: #131313;
 `;
 
 const Image = styled(motion.img)`
@@ -146,7 +148,7 @@ const Main = () => {
               drag={true}
               //dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }}
               initial={{ opacity: 0.8, y: -100 }}
-              animate={{ opacity: 1, y: 130, transition: { duration: 20 },  scale: 1.9, rotate: 300  }}
+              animate={{ opacity: 1, y: 130, transition: { duration: 20 },  scale: 1.5, rotate: 300  }}
             />
             <Image
               src={PlanetTwo}
@@ -165,16 +167,72 @@ const Main = () => {
               drag={true}
               //dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
               initial={{ opacity: 0.8, y: 700 }}
-              animate={{ opacity: 1, y: 0, transition: { duration: 20 } , scale: 2.7, rotate: 160}}
+              animate={{ opacity: 1, y: 0, transition: { duration: 20 } , scale: 2.7, rotate: 190}}
             />
           </ColumnRight>
         </Container>
       </Section>
       )
     } else {
+      const fadeLeft = {
+        hidden: { opacity: 0, x: -400 },
+        visible: { opacity: 1, x: 0 }
+      };
       return(
+        
+        <Section id="lolol">
+          <Container>
+          <ColumnLeft>
+          <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+            >
+             Hello Person
+            </motion.h1>
+            <motion.p
+              variants={fadeLeft}
+              initial='hidden'
+              animate='visible'
+              transition={{ duration: 1 }}
+            >
+              Please login to continue
+            </motion.p>
+          <App />
+          </ColumnLeft>
 
-        <PreApp />
+        <ColumnRight>
+            <Image
+              src={PlanetOne}
+              alt='planet'
+              whileTap={{ scale: 0.9 }}
+              drag={true}
+              //dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }}
+              initial={{ opacity: 0.8, y: -100 }}
+              animate={{ opacity: 1, y: 130, transition: { duration: 20 },  scale: 1.5, rotate: 300  }}
+            />
+            <Image
+              src={PlanetTwo}
+              alt='planet'
+              whileTap={{ scale: 1 }}
+              drag={true}
+              //dragConstraints={{ left: 50, right: 0, top: 0, bottom: 50 }}
+              initial={{ opacity: 0.8, x: 400 , scale: 2.2}}
+              animate={{ opacity: 1, x: -100, transition: { duration: 20 }, scale: 0.2, rotate: 100 }}
+              
+            />       
+            <Image
+              src={PlanetFour}
+              alt='planet'
+              whileTap={{ scale: 0.9 }}
+              drag={true}
+              //dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+              initial={{ opacity: 0.8, y: 700 }}
+              animate={{ opacity: 1, y: 0, transition: { duration: 20 } , scale: 2.7, rotate: 190}}
+            />
+          </ColumnRight>
+          </Container>
+        </Section>
       )
     }
 }

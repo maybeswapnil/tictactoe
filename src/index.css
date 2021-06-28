@@ -123,6 +123,8 @@ body {
     height: 100vh;
     color: white;
     scroll-snap-align: start;
+    background-color: white; 
+    
   }
 
   .container {
@@ -134,7 +136,7 @@ body {
     padding-top: 7vh;
   }
   .two {
-    background-color: white;
+    background-color: white ;
     padding-top: 7vh;
   }
 
@@ -145,7 +147,7 @@ body {
   }
   #logonheader {
     font-size:100px;
-    color: #343f56;
+    color: #131313;
   }
   #despheader {
     font-size:50px;

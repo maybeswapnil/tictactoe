@@ -68,8 +68,6 @@ class App extends Component {
     if(!this.state.status) {
         return (
           <div className="App">
-            
-            <h1 id="loginheader">Login.</h1>
             <input type="text" name="uname" id="loginbox" placeholder="Enter ID" onChange={this.handleChangeUname}/>
             <br />
             <br />
