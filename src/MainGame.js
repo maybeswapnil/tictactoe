@@ -159,12 +159,7 @@ class MainGame extends Component {
         if(this.state.win) {
             return(
                 <div>
-                    <div className='flex'>
-                        
-                        <div className='p1'>{this.state.myName}(You): X</div>
-                      
-                        <div className='p2'>{this.state.opponentName}: O</div>
-                        </div>
+                    
                         <div className='grid'>
                             <div className='space' id='one' onClick={this.box1}></div>
                             <div className='space' id='two'onClick={this.box2}></div>
@@ -178,7 +173,7 @@ class MainGame extends Component {
                         </div> 
     
                         <div className='wrapper'>
-                    <button className='reset'>please go easy, aws servers are slow as a banana slug</button>
+                    
                     </div>
                 </div>
             );

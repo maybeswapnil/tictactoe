@@ -68,6 +68,7 @@ class App extends Component {
     if(!this.state.status) {
         return (
           <div className="App">
+            
             <input type="text" name="uname" id="loginbox" placeholder="Enter ID" onChange={this.handleChangeUname}/>
             <br />
             <br />
@@ -81,8 +82,6 @@ class App extends Component {
       console.log("hello");
       return (
         <div>
-
-          <h1 id="final">tictactoe by chemo</h1>
           
           <MainGame myID={this.state.uname} opponentID={this.state.opponentID}/>
 
@@ -92,8 +91,7 @@ class App extends Component {
       return (
         <div className="App">
           
-          <h1 id="opponentheader">Welcome,  select opponent.</h1>
-          <input type="text" name="uname" id="loginbox" placeholder="Enter ID" onChange={this.handleChangeOppo}/>
+          <input type="text" name="uname" id="loginbox" placeholder="Enter opponent ID" onChange={this.handleChangeOppo}/>
           {!this.state.oppoError? <h1 id="loginerror">wrong id!</h1>:<h1></h1>}
           <br/>
           

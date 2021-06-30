@@ -1,10 +1,10 @@
 import {React, useState} from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import PlanetOne from './images/planet.svg';
-import PlanetTwo from './images/planet-2.svg';
-import PlanetThree from './images/planet-3.svg';
-import PlanetFour from './images/planet-4.svg';
+import PlanetFour from './images/planet.png';
+import PlanetTwo from './images/planet-2.png';
+import PlanetOne from './images/planet-3.png';
+import PlanetThree from './images/planet-4.png';
 import PreApp from './PreApp';
 import App from './App';
 
@@ -44,6 +44,12 @@ const ColumnLeft = styled.div`
     margin: 2rem 0;
     font-size: 4rem;
     line-height: 1.1;
+  }
+  .pppopo {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    line-height: 0.4;
+    color: #F54748;
   }
 `;
 
@@ -101,6 +107,8 @@ const Main = () => {
       };
 
     const [state, setState] = useState(true);
+    const [login, setLogin] = useState(true);
+
 
     
     if(state) {
@@ -197,8 +205,9 @@ const Main = () => {
               animate='visible'
               transition={{ duration: 1 }}
             >
-              Please login to continue
+              {login? "Performance might be slow":""}
             </motion.p>
+            
           <App />
           </ColumnLeft>
 
