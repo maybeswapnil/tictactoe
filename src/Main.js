@@ -2,9 +2,9 @@ import {React, useState} from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import PlanetFour from './images/planet.png';
-import PlanetTwo from './images/planet-2.png';
+import PlanetThree from './images/planet-2.png';
 import PlanetOne from './images/planet-3.png';
-import PlanetThree from './images/planet-4.png';
+import PlanetTwo from './images/planet-4.png';
 import PreApp from './PreApp';
 import App from './App';
 
